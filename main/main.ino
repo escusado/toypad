@@ -8,7 +8,7 @@
 #include "Adafruit_NeoKey_1x4.h"
 #include "seesaw_neopixel.h"
 
-// Trigger the rotary encoder, color leds and Adafruit seesaw addressing system startup
+// Adafruit seesaw addressing config
 #define SS_SWITCH 24
 #define SS_NEOPIX 6
 #define SEESAW_ADDR 0x36
@@ -72,7 +72,7 @@ void setup()
     neokey.pixels.show();
     delay(50);
   }
-  Serial.println("Macropad ON! Lets Fucking GOOOO!");
+  Serial.println("Toypad ON! Lets Fucking GOOOO!");
 }
 
 // The magic happens here every 10 milliseconds
@@ -118,7 +118,7 @@ void loop()
       Keyboard.set_key1(KEY_LEFT_BRACE);
     }
     Keyboard.send_now();
-    encoderPosition = newPosition; // and save for next round
+    encoderPosition = newPosition; // and save for next loop
   }
 
   // 4 Keys Keypad
