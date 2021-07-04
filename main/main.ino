@@ -50,14 +50,13 @@ void setup()
   }
   Serial.println("NeoKey started!");
 
-  Serial.println("Turning on interrupts...");
+  Serial.println("Turning on interrupts for rotary encoder...");
   delay(10);
   ss.setGPIOInterrupts((uint32_t)1 << SS_SWITCH, 1);
   ss.enableEncoderInterrupt();
-  Serial.println("Interrupts started");
-
-  ss.pinMode(SS_SWITCH, INPUT_PULLUP);       // Read rotary encoder button pressable pin
+  ss.pinMode(SS_SWITCH, INPUT_PULLUP);       
   encoderPosition = ss.getEncoderPosition(); // Get starting position for rotary encoder
+  Serial.println("Rotary encoder started");
 
   // Leds statup sequence on boot (scroll animation)
   for (uint16_t i = 0; i < neokey.pixels.numPixels(); i++)
