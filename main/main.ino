@@ -1,4 +1,4 @@
-// Setup
+// Setup (good unrelated guide https://www.youtube.com/watch?v=5yjdPbCac9g&t=224s)
 // Install Arduino IDE https://www.arduino.cc/en/guide
 // Install Teensyduino https://www.pjrc.com/teensy/teensyduino.html
 // Key codes are there too https://www.pjrc.com/teensy/td_keyboard.html
