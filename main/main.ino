@@ -27,7 +27,7 @@ uint8_t currentLedColor = 0;      // tracks the colors of the LEDs cycle
 // Device startup
 void setup()
 {
-  // begin serial communication (to print in Serial Monitor window)
+  // begin serial communication (to print in Arduino IDE Serial Monitor window)
   Serial.begin(9600);
   while (!Serial)
     delay(10);
